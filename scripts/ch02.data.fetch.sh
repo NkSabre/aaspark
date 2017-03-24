@@ -5,7 +5,7 @@ ROOT_DIR=`pwd`
 DATA_DIR=/yjh
 TMP_DIR=/tmp/aaspark-yjh
 
-hadoop fs --mkdir -p $DATA_DIR/linkage
+hadoop fs -mkdir -p $DATA_DIR/linkage
 
 mkdir -p $TMP_DIR
 cd $TMP_DIR/
