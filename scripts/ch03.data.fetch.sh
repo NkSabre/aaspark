@@ -13,3 +13,5 @@ curl -o profiledata.tar.gz  http://www.iro.umontreal.ca/~lisa/datasets/profileda
 tar zxvf profiledata.tar.gz
 #mv profiledata_06-May-2005/*.txt $DATA_DIR/ch03/
 hadoop fs -put profiledata_06-May-2005/*.txt $DATA_DIR/ch03/
+rm $TMP_DIR -rf
+

@@ -12,7 +12,11 @@ import org.apache.spark.rdd.RDD
 
 object Recommender {
   def main(args: Array[String]): Unit = {
-    val sc = new SparkContext(new SparkConf().setAppName("AASpark ch03 Recommender"))
+    val conf = new SparkConf().setAppName("AASpark ch03 Recommender")
+      .setExecutorEnv("total-executor-cores", "16")
+      .setExecutorEnv("--executor-memory", "16g")
+    
+    val sc = new SparkContext(conf)
 
     val rawUserArtistData = sc.textFile("hdfs:///yjh/ch03/user_artist_data.txt", 16)
     val userIDStats = rawUserArtistData.map(_.split(' ')(0).toDouble).stats()
