@@ -12,8 +12,8 @@ object RDFPrediction extends Serializable {
 
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("AASpark ch04 Prediction with Decision Tree")
-      .setExecutorEnv("--total-executor-cores", "32")
-      .setExecutorEnv("--executor-memory", "32g")
+      .setExecutorEnv("total-executor-cores", "32")
+      .setExecutorEnv("executor-memory", "32g")
 
     val sc = new SparkContext(conf)
 
