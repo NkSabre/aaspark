@@ -12,6 +12,6 @@ cd $TMP_DIR/
 curl -o kddcup.data.gz http://kdd.ics.uci.edu/databases/kddcup99/kddcup.data.gz
 gzip -d kddcup.data.gz
 #mv profiledata_06-May-2005/*.txt $DATA_DIR/ch03/
-hadoop fs -put kddcup.data.corrected $DATA_DIR/ch05/
+hadoop fs -put kddcup.data $DATA_DIR/ch05/
 rm $TMP_DIR -rf
 
