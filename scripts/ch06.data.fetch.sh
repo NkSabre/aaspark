@@ -9,6 +9,7 @@ hadoop fs -mkdir -p $DATA_DIR/ch06
 
 mkdir -p $TMP_DIR
 cd $TMP_DIR/
-curl -s -L http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles-multistream.xml.bz2 | bzip2 -cd  | hadoop fs -put - $DATA_DIR/ch06/wikidump.xml
+curl -o enwiki-latest-pages-articles-multistream.xml.bz2 https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles-multistream.xml.bz2
+bzip2 -cd enwiki-latest-pages-articles-multistream.xml.bz2 | hadoop fs -put - $DATA_DIR/ch06/wikidump.xml
 rm $TMP_DIR -rf
 
