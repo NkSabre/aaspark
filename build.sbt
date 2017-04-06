@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-mllib" % "2.1.0",
 
   "edu.stanford.nlp" % "stanford-corenlp" % "3.7.0",
-  "edu.stanford.nlp" % "stanford-corenlp" % "3.7.0" classifier "models",
+  // "edu.stanford.nlp" % "stanford-corenlp" % "3.7.0" classifier "models",
   "org.apache.hadoop" % "hadoop-client" % "2.8.0",
   "edu.umd" % "cloud9" % "2.0.1",
   // "com.google.guava" % "guava" % "14.0.1",

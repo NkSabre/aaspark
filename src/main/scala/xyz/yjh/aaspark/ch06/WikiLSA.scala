@@ -78,8 +78,8 @@ object WikiLSA extends Serializable{
     val mat = new RowMatrix(termDocMatrix)
     val svd = mat.computeSVD(k, computeU = true)
 
-    val topConceptTerms = topTermsInTopConcepts(svd, 4, 10, idTerms)
-    val topConceptDocs = topDocsInTopConcepts(svd, 4, 10, docIds)
+    val topConceptTerms = topTermsInTopConcepts(svd, 10, 10, idTerms)
+    val topConceptDocs = topDocsInTopConcepts(svd, 10, 10, docIds)
     for ((terms, docs) <- topConceptTerms.zip(topConceptDocs)) {
       // scalastyle:off
       println("Concept terms: " + terms.map(_._1).mkString(", "))
